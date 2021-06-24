@@ -9,36 +9,31 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Internet_competition">
+        <activity android:name=".signin"></activity>
         <activity android:name=".MainActivity">
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
+        </activity>
+        <activity android:name=".wakuang">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".wode">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".wakuang">
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW"/>
-
-            </intent-filter>
-        </activity>
-
-        <activity android:name=".wode">
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW"/>
-            </intent-filter>
-        </activity>
-
-        <activity android:name=".signin">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
-
-        </activity>
-
     </application>
 
 </manifest>
