@@ -6,37 +6,43 @@
     android:layout_height="match_parent">
 
     <Button
-        android:id="@+id/fanhui"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="1dp"
-        android:layout_marginEnd="1dp"
-        android:layout_marginBottom="16dp"
+        android:id="@+id/cancel"
+        android:layout_width="262dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginEnd="70dp"
+        android:layout_marginBottom="24dp"
         android:text="返回"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/button"
-        android:layout_width="206dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="14dp"
-        android:text="开始"
-        app:layout_constraintBottom_toTopOf="@+id/fanhui"
-        app:layout_constraintEnd_toStartOf="@+id/button2"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:id="@+id/btncet4"
+        android:layout_width="380dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:textSize="50dp"
+        android:text="四级考纲词汇"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button2"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:text="结束"
-        app:layout_constraintBaseline_toBaselineOf="@+id/button"
+        android:id="@+id/btncet6"
+        android:layout_width="380dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:textSize="50dp"
+        android:text="六级考纲词汇"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btncet4" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

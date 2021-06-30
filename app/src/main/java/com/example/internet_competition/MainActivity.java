@@ -9,7 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import com.example.internet_competition.learning.LearningActivity;
+import com.example.internet_competition.learning.LearningmainActivity;
 
 public class MainActivity extends AppCompatActivity {
     Button btn1, btn2;//先声明
@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         btn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, LearningActivity.class);
+                Intent intent = new Intent(MainActivity.this, LearningmainActivity.class);
                 startActivity(intent);
             }
         });
