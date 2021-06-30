@@ -8,12 +8,12 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class wakuang extends AppCompatActivity {
+public class LearningActivity extends AppCompatActivity {
     Button but_return,but_start,but_finish;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_wakuang);
+        setContentView(R.layout.activity_learning);
 
 
 
@@ -22,7 +22,7 @@ public class wakuang extends AppCompatActivity {
         but_return.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                wakuang.this.finish();
+                LearningActivity.this.finish();
             }
         });
     }
