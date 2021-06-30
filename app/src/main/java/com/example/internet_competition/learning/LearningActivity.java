@@ -1,4 +1,4 @@
-package com.example.internet_competition;
+package com.example.internet_competition.learning;
 
 // 用于设计背单词挖矿活动页面
 
@@ -8,13 +8,14 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.internet_competition.R;
+
 public class LearningActivity extends AppCompatActivity {
     Button but_return,but_start,but_finish;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_learning);
-
 
 
         // 返回button

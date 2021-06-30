@@ -1,4 +1,4 @@
-package com.example.internet_competition;
+package com.example.internet_competition.login;
 
 import android.content.ContentValues;
 import android.content.Intent;
@@ -10,6 +10,8 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.internet_competition.R;
 
 import database.MyDatabaseHelper;
 
@@ -53,9 +55,9 @@ public class RegisterActivity extends AppCompatActivity {
                 //会出现一下情况：1.用户名已存在，2.两次输入密码不一致
                 if (!password1.equals(password2)) {
                     Toast.makeText(getApplicationContext(), "两次密码输入不一致", Toast.LENGTH_SHORT).show();
-                } else if (password1.equals(password2) && dbhelper.queryByUsername(username)) {
+                } else if (dbhelper.queryByUsername(username)) {
                     Toast.makeText(getApplicationContext(), "用户名已存在", Toast.LENGTH_SHORT).show();
-                } else if (password1.equals(password2) && !dbhelper.queryByUsername(username)) {
+                } else if (!dbhelper.queryByUsername(username)) {
                     ContentValues values =new ContentValues();
                     SQLiteDatabase db =dbhelper.getWritableDatabase();
                     values.put("username",username);
@@ -63,8 +65,6 @@ public class RegisterActivity extends AppCompatActivity {
                     db.insert("User",null,values);
                     RegisterActivity.this.finish();
                 }
-
-
             }
         });
 

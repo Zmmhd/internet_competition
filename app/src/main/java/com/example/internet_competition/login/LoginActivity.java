@@ -1,4 +1,4 @@
-package com.example.internet_competition;
+package com.example.internet_competition.login;
 
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,6 +14,9 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import com.example.internet_competition.R;
+import com.example.internet_competition.MainActivity;
 
 import database.MyDatabaseHelper;
 
