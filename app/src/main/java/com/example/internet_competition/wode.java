@@ -2,7 +2,6 @@ package com.example.internet_competition;
 
 //  我的页面，主要用来显示用户信息，和一个排行榜入口
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -14,7 +13,7 @@ public class wode extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.wode);
+        setContentView(R.layout.activity_wode);
         but = (Button) findViewById(R.id.fanhui);
         but.setOnClickListener(new View.OnClickListener() {
             @Override

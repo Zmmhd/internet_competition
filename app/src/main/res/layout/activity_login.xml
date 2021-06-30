@@ -24,7 +24,7 @@
         />
 
     <EditText
-        android:id="@+id/username"
+        android:id="@+id/L_username"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="16sp"
@@ -40,7 +40,7 @@
         />
 
     <EditText
-        android:id="@+id/password"
+        android:id="@+id/L_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -59,7 +59,7 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/login"
+            android:id="@+id/L_login"
             android:layout_width="0dp"
             android:layout_height="40dp"
             android:layout_gravity="center"
@@ -68,7 +68,7 @@
             android:layout_weight="1"
             android:text="登录" />
         <Button
-            android:id="@+id/register"
+            android:id="@+id/L_register"
             android:layout_width="0dp"
             android:layout_height="40dp"
             android:layout_gravity="center"
@@ -80,7 +80,7 @@
             />
     </LinearLayout>
     <Button
-        android:id="@+id/findPassword"
+        android:id="@+id/L_findPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="找回密码"

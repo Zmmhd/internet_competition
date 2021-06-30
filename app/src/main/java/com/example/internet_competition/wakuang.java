@@ -5,7 +5,6 @@ package com.example.internet_competition;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import database.user_data;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -14,14 +13,8 @@ public class wakuang extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.wakuang);
+        setContentView(R.layout.activity_wakuang);
 
-        // 从MainActivity接受用户对象，用于修改和实现功能
-        user_data user = (user_data) getIntent().getSerializableExtra("user_data");
-        // 用于接收单词
-        String[][] sorce;
-        sorce = user.getRandomWords();
-        
 
 
         // 返回button

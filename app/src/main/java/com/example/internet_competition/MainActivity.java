@@ -9,11 +9,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import database.user_data;
-
 public class MainActivity extends AppCompatActivity {
-    Button btn1, btn2;//先声明哦
-    user_data user = new user_data("张三", 0);
+    Button btn1, btn2;//先声明
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,8 +24,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, wode.class);
-                // 将user对象传给wakuang这个activity，用于对于对象数据的修改
-                intent.putExtra("user_data", user);
                 startActivity(intent);
             }
         });
@@ -36,8 +31,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, wakuang.class);
-                // 将user对象传给wakuang这个activity，用于对于对象数据的修改
-                intent.putExtra("user_data", user);
                 startActivity(intent);
             }
         });

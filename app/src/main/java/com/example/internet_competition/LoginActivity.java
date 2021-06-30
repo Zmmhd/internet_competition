@@ -3,10 +3,8 @@ package com.example.internet_competition;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.IBinder;
@@ -38,14 +36,14 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         //数据库创建
-        dbHelper = new MyDatabaseHelper(this, "UserInformation", null, 1);
+        dbHelper = new MyDatabaseHelper(this, "UserInformation.db", null, 1);
 
         //找到控件
-        btnLogin = findViewById(R.id.login);
-        btnRegister = findViewById(R.id.register);
-        btnFindPassword = findViewById(R.id.findPassword);
-        mEtUsername = findViewById(R.id.username);
-        mEtPassword = findViewById(R.id.password);
+        btnLogin = findViewById(R.id.L_login);
+        btnRegister = findViewById(R.id.L_register);
+        btnFindPassword = findViewById(R.id.L_findPassword);
+        mEtUsername = findViewById(R.id.L_username);
+        mEtPassword = findViewById(R.id.L_password);
 
         //登录操作逻辑
         btnLogin.setOnClickListener(new View.OnClickListener() {
@@ -56,7 +54,7 @@ public class LoginActivity extends AppCompatActivity {
                 Intent intent = null;
 
                 //判断账号密码是否匹配，待完成
-                int flag = dbHelper.queryByUsername(username, password);
+                int flag = dbHelper.queryByUser(username, password);
                 if(flag==1){
                     intent = new Intent(LoginActivity.this, MainActivity.class);
                     startActivity(intent);
@@ -78,27 +76,25 @@ public class LoginActivity extends AppCompatActivity {
         btnRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String username = mEtUsername.getText().toString();
-                String password = mEtPassword.getText().toString();
-
-                SQLiteDatabase db = dbHelper.getWritableDatabase();
-                ContentValues values = new ContentValues();
-                values.put("username", username);
-                values.put("password", password);
-
-                //插入数据,第一个参数为表名
-                //第二个参数用于在未指定添加数据的情况下给某些可为空的列自动赋值NULL
-                db.insert("User", null, values);
-
-                //清除数据,方便后续的查表操作
-                values.clear();
+                Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
+                startActivity(intent);
+//                String username = mEtUsername.getText().toString();
+//                String password = mEtPassword.getText().toString();
+//
+//                SQLiteDatabase db = dbHelper.getWritableDatabase();
+//                ContentValues values = new ContentValues();
+//                values.put("username", username);
+//                values.put("password", password);
+//
+//                //插入数据,第一个参数为表名
+//                //第二个参数用于在未指定添加数据的情况下给某些可为空的列自动赋值NULL
+//                db.insert("User", null, values);
+//
+//                //清除数据,方便后续的查表操作
+//                values.clear();
 
             }
         });
-
-
-
-
 
     }
 

@@ -36,15 +36,16 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
     }
 
 
-    public int queryByUsername(String targetUsername, String targetPassword){
+    public int queryByUser(String targetUsername, String targetPassword){
         if(targetPassword.equals("") && targetUsername.equals(""))return 2;
         int flag = 0;
         SQLiteDatabase db = getReadableDatabase();
+        String username, password;
         Cursor cursor = db.query("User", null, null, null, null, null, null);
         if(cursor.moveToFirst()){
             do{
-                String username = cursor.getString(cursor.getColumnIndex("username"));
-                String password = cursor.getString(cursor.getColumnIndex("password"));
+                username = cursor.getString(cursor.getColumnIndex("username"));
+                password = cursor.getString(cursor.getColumnIndex("password"));
 
                 if (username.equals(targetUsername)){
                     if(password.equals(targetPassword))
@@ -55,4 +56,24 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
         cursor.close();
         return flag;
     }
+
+
+    public boolean queryByUsername(String targetUsername){
+        if(targetUsername.equals(""))return false;
+        boolean flag = false;
+        SQLiteDatabase db = getReadableDatabase();
+        String username;
+        Cursor cursor = db.query("User", null, null, null, null, null, null);
+        if(cursor.moveToFirst()){
+            do{
+                username = cursor.getString(cursor.getColumnIndex("username"));
+                if (username.equals(targetUsername)){
+                    flag=true;
+                }
+            } while(cursor.moveToNext());
+        }
+        cursor.close();
+        return flag;
+    }
+
 }
