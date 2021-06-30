@@ -9,9 +9,7 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.internet_competition.MainActivity;
 import com.example.internet_competition.R;
-import com.example.internet_competition.wode;
 
 public class LearningmainActivity extends AppCompatActivity {
     // 部件声明
@@ -20,7 +18,7 @@ public class LearningmainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_learning);
+        setContentView(R.layout.activity_learningmain);
 
         // 绑定button
         btnReturn = (Button) findViewById(R.id.cancel);

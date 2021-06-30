@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/word"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".learning.WordsActivity">
+
+    <TextView
+        android:id="@+id/words"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="10dp"
+        android:text="word"
+        android:textColor="@color/design_default_color_background"
+        android:textSize="40sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/wordID"
+        android:layout_width="wrap_content"
+        android:layout_height="38dp"
+        android:layout_alignBottom="@id/words"
+        android:layout_marginLeft="30dp"
+        android:layout_toRightOf="@id/words"
+        android:gravity="center"
+        android:text="128"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/IPA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/words"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="10dp"
+        android:text="音标"
+        android:textColor="#E3C8C8"
+        android:textSize="20sp" />
+
+
+    <Button
+        android:id="@+id/audio"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/words"
+        android:layout_alignBottom="@id/IPA"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/IPA"
+        android:theme="@style/Base.CardView" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/purple_500" />
+
+    <TextView
+        android:id="@+id/wordPart"
+        android:layout_width="400dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/IPA"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="30dp"
+        android:padding="10dp"
+        android:scrollbars="vertical"
+        android:text="词意"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/example"
+        android:layout_width="400dp"
+        android:layout_height="150dp"
+        android:layout_below="@id/wordPart"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="30dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="40dp"
+        android:scrollbars="vertical"
+        android:text="具体例句"
+        android:textColor="@color/purple_500"
+        android:textSize="20sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/wordPart"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="20dp"
+        android:text="例句"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+<!--    <ImageView-->
+<!--        android:id="@+id/picture"-->
+<!--        android:layout_width="209dp"-->
+<!--        android:layout_height="181dp"-->
+<!--        android:layout_below="@id/example"-->
+<!--        android:layout_alignParentStart="true"-->
+<!--        android:layout_alignParentLeft="true"-->
+<!--        android:layout_alignParentEnd="true"-->
+<!--        android:layout_alignParentRight="true"-->
+<!--        android:layout_marginStart="40dp"-->
+<!--        android:layout_marginLeft="40dp"-->
+<!--        android:layout_marginTop="30dp"-->
+<!--        android:layout_marginEnd="162dp"-->
+<!--        android:layout_marginRight="162dp"-->
+<!--        android:scaleType="centerCrop" />-->
+
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginEnd="41dp"
+        android:layout_marginRight="41dp"
+        android:layout_marginBottom="32dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/btn_up"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="20dp"
+            android:button="@null"
+            android:gravity="center"
+            android:text="上一个"
+            android:textSize="20sp" />
+
+        <RadioButton
+            android:id="@+id/btn_down"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="30dp"
+            android:button="@null"
+            android:gravity="center"
+            android:text="下一个"
+            android:textSize="20sp" />
+    </RadioGroup>
+
+
+</RelativeLayout>
