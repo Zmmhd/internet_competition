@@ -3,6 +3,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 //  用于设计登录页面的活动
 
-public class signin extends AppCompatActivity {
+public class RegisterActivity extends AppCompatActivity {
 
 }

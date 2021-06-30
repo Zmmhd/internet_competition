@@ -1,4 +1,4 @@
-package com.example.internet_competition;
+package database;
 
 import android.content.Context;
 import android.database.Cursor;
@@ -36,8 +36,9 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
     }
 
 
-    public boolean queryByUsername(String targetUsername, String targetPassword){
-        boolean flag = false;
+    public int queryByUsername(String targetUsername, String targetPassword){
+        if(targetPassword.equals("") && targetUsername.equals(""))return 2;
+        int flag = 0;
         SQLiteDatabase db = getReadableDatabase();
         Cursor cursor = db.query("User", null, null, null, null, null, null);
         if(cursor.moveToFirst()){
@@ -47,7 +48,7 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
 
                 if (username.equals(targetUsername)){
                     if(password.equals(targetPassword))
-                        flag = true;
+                        flag = 1;
                 }
             } while(cursor.moveToNext());
         }

@@ -17,6 +17,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import database.MyDatabaseHelper;
+
 public class LoginActivity extends AppCompatActivity {
 
     //数据库
@@ -54,12 +56,16 @@ public class LoginActivity extends AppCompatActivity {
                 Intent intent = null;
 
                 //判断账号密码是否匹配，待完成
-                if(dbHelper.queryByUsername(username, password)){
+                int flag = dbHelper.queryByUsername(username, password);
+                if(flag==1){
                     intent = new Intent(LoginActivity.this, MainActivity.class);
                     startActivity(intent);
                 }
-                else{
+                else if(flag == 0){
                     Toast.makeText(getApplicationContext(), "登录错误", Toast.LENGTH_SHORT).show();
+                }
+                else {
+                    Toast.makeText(getApplicationContext(), "请输入账号密码", Toast.LENGTH_SHORT).show();
                 }
 //                if(true){
 //                    intent = new Intent(MainActivity.this, LoginActivity.class);

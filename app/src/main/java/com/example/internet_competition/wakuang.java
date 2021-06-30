@@ -20,8 +20,8 @@ public class wakuang extends AppCompatActivity {
         user_data user = (user_data) getIntent().getSerializableExtra("user_data");
         // 用于接收单词
         String[][] sorce;
+        sorce = user.getRandomWords();
         
-
 
 
         // 返回button
