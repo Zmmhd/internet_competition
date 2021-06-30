@@ -58,6 +58,8 @@ public class LoginActivity extends AppCompatActivity {
                 if(flag==1){
                     intent = new Intent(LoginActivity.this, MainActivity.class);
                     startActivity(intent);
+                    Toast.makeText(getApplicationContext(), "登录成功", Toast.LENGTH_SHORT).show();
+                    LoginActivity.this.finish();
                 }
                 else if(flag == 0){
                     Toast.makeText(getApplicationContext(), "登录错误", Toast.LENGTH_SHORT).show();
