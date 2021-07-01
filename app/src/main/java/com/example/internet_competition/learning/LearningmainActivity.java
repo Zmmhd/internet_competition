@@ -13,7 +13,7 @@ import com.example.internet_competition.R;
 
 public class LearningmainActivity extends AppCompatActivity {
     // 部件声明
-    Button btnReturn,btnCet4,btnCet6;
+    Button btnReturn,btnCet4,btnCet6,btnWord;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +24,7 @@ public class LearningmainActivity extends AppCompatActivity {
         btnReturn = (Button) findViewById(R.id.cancel);
         btnCet4=(Button)findViewById(R.id.btncet4);
         btnCet6=(Button)findViewById(R.id.btncet6);
+        btnWord=(Button)findViewById(R.id.btnword);
 
         // 绑定响应事件
         // 返回键事件
@@ -50,6 +51,15 @@ public class LearningmainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(LearningmainActivity.this, RecitewordsActivity.class);
                 intent.putExtra("book","Cet6");
+                startActivity(intent);
+            }
+        });
+
+        //btnWord键事件
+        btnWord.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LearningmainActivity.this, WordsActivity.class);
                 startActivity(intent);
             }
         });

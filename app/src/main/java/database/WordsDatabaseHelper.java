@@ -11,7 +11,7 @@ import android.widget.Toast;
 public class WordsDatabaseHelper extends SQLiteOpenHelper {
 
     // weight对于不同单词本，如四级，高中，权重不一样，获得币为weight * coincidence。当天普通词为0，特殊词为特定值。
-    public static final String CREATE_NEWWORDS = "create table NewWords ("
+    public static final String CREATE_WORDBOOK = "create table WordBook ("
             + "id integer primary key autoincrement, "
             + "EnglishWord text,"
             + "ChineseWord text,"
@@ -29,7 +29,7 @@ public class WordsDatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL(CREATE_NEWWORDS);
+        db.execSQL(CREATE_WORDBOOK);
         Toast.makeText(mContext,"Create succeeded",Toast.LENGTH_SHORT).show();
     }
 

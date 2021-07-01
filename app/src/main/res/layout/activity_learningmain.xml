@@ -20,12 +20,14 @@
     <Button
         android:id="@+id/btncet4"
         android:layout_width="380dp"
-        android:layout_height="200dp"
+        android:layout_height="0dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="16dp"
-        android:textSize="50dp"
+        android:layout_marginBottom="246dp"
         android:text="四级考纲词汇"
+        android:textSize="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -37,10 +39,22 @@
         android:layout_height="200dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:textSize="50dp"
         android:text="六级考纲词汇"
+        android:textSize="50dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btncet4" />
+
+    <Button
+        android:id="@+id/btnword"
+        android:layout_width="236dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="177dp"
+        android:text="单词本"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btncet4" />
 
