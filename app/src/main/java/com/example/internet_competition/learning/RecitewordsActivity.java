@@ -108,14 +108,14 @@ public class RecitewordsActivity extends AppCompatActivity {
     }
 
     void getwords() {
-        int n =r.nextInt(14),flag = r.nextInt(4)+1,m;
+        int n =r.nextInt(13)+1,flag = r.nextInt(4)+1,m;
         enword = twords[n];
         rword = tnum[n];
 
         word1 = tnum[r.nextInt(n)];
         word2 = tnum[r.nextInt(n)];
-        word3 = tnum[r.nextInt(14-n)+n];
-        word4=tnum[r.nextInt(14-n)+n];
+        word3 = tnum[r.nextInt(13-n)+n];
+        word4=tnum[r.nextInt(13-n)+n];
         // 对四个word产生一个随机正确答案
         switch (flag){
             case 1:
